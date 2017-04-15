@@ -24,7 +24,7 @@ uint8_t hdc1080_init(uint16_t USCI_Base_Address,Temp_Reso Temperature_Resolution
 	 */
 
 	/* Set the acquisition mode to measure both temperature and humidity by setting Bit[12] to 1 */
-	uint16_t config_reg_value=0x1000;
+	uint16_t config_reg_value=0x3000; //Heater enable
 	uint8_t data_send[2],return_value;
 
 	if(Temperature_Resolution_x_bit == Temperature_Resolution_11_bit)
